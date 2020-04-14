@@ -6,9 +6,14 @@ public class DominoAdder : MonoBehaviour
 {
     public float rotationSpeed = 1000f;
 
-    public GameObject particle;
+    private GameObject particle;
 
     private bool isDown = false;
+
+    void Start()
+    {
+        particle = GameObject.FindWithTag("Domino");
+    }
 
     // Update is called once per frame
     void Update()
