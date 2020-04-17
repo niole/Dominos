@@ -15,8 +15,22 @@ public class MovePlayer : MonoBehaviour
         float vert = ApplySpeed(Input.GetAxis("Vertical"));
         float horiz = ApplySpeed(Input.GetAxis("Horizontal"));
 
-        player.AddForce(horiz, 0f, vert, ForceMode.VelocityChange);
+        Debug.Log($"{vert} {horiz}");
 
+        if (vert != 0f || horiz != 0f)
+        {
+            player.AddForce(horiz, 0f, vert, ForceMode.VelocityChange);
+        }
+        else
+        {
+            player.velocity = Vector3.zero;
+            player.angularVelocity = Vector3.zero;
+        }
+
+        if (player.velocity.magnitude > 10f)
+        {
+            player.velocity = player.velocity.normalized * 10f;
+        }
     }
 
     float ApplySpeed(float output)

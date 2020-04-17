@@ -10,10 +10,8 @@ public class HandleDominoCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Domino Collided");
         if (other.gameObject.tag=="Domino")
         {
-            Debug.Log("Collided with domino");
             domino.velocity += (Time.deltaTime * collisionMultiplier * domino.velocity);
         }
     }
