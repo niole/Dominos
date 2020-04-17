@@ -8,6 +8,8 @@ public class MovePlayer : MonoBehaviour
 
     public float speed = 10f;
 
+    public float terminalSpeed = 10f;
+
     // Update is called once per frame
     void Update()
     {
@@ -27,9 +29,9 @@ public class MovePlayer : MonoBehaviour
             player.angularVelocity = Vector3.zero;
         }
 
-        if (player.velocity.magnitude > 10f)
+        if (player.velocity.magnitude > terminalSpeed)
         {
-            player.velocity = player.velocity.normalized * 10f;
+            player.velocity = player.velocity.normalized * terminalSpeed;
         }
     }
 

@@ -6,7 +6,7 @@ public class HandleDominoCollision : MonoBehaviour
 {
     public Rigidbody domino;
 
-    public float collisionMultiplier = 40f;
+    public float collisionMultiplier = 50f;
 
     void OnCollisionEnter(Collision other)
     {
