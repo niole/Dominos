@@ -212,8 +212,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131550740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.03, z: 0}
-  m_LocalScale: {x: 1.9814, y: 1, z: 1.8833}
+  m_LocalPosition: {x: 0, y: -1.03, z: 4}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 534669905}
   m_Father: {fileID: 0}
@@ -389,8 +389,8 @@ Camera:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.11774653, g: 0.43149495, b: 0.9245283, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -429,13 +429,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.60699296, y: -0.1774992, z: 0.0593459, w: 0.7723547}
-  m_LocalPosition: {x: 1.27, y: 15.45, z: -2.3}
+  m_LocalRotation: {x: 0.5735764, y: 0, z: 0, w: 0.8191521}
+  m_LocalPosition: {x: 0, y: 7.23, z: -3.77}
   m_LocalScale: {x: -3.295918, y: 1.6527, z: 0.48443925}
   m_Children: []
   m_Father: {fileID: 131550745}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 73.475006, y: -45.29, z: -25.803001}
+  m_LocalEulerAnglesHint: {x: 70, y: 0, z: 0}
 --- !u!1 &855841863
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,13 +465,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855841863}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &855841865
 MonoBehaviour:
@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855841863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.015874863, y: -0.661, z: -7.763}
+  m_LocalPosition: {x: 0, y: 2, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 1726782806}
   - component: {fileID: 1726782805}
   - component: {fileID: 1726782811}
+  - component: {fileID: 1726782812}
   m_Layer: 0
   m_Name: Domino
   m_TagString: Domino
@@ -683,7 +684,7 @@ RectTransform:
   m_GameObject: {fileID: 1726782804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -38.13}
-  m_LocalScale: {x: 0.6692799, y: 2.3838925, z: 1.2826805}
+  m_LocalScale: {x: 0.6692799, y: 3, z: 1.2826805}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -701,11 +702,25 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726782804}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 10
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1726782812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726782804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3b36bf21f744fe286a5181a6eba241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  domino: {fileID: 1726782811}
+  collisionMultiplier: 40

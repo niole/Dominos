@@ -23,4 +23,13 @@ public class MovePlayer : MonoBehaviour
     {
         return output * speed * Time.deltaTime;
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag=="Domino")
+        {
+            player.velocity = Vector3.zero;
+            player.angularVelocity = Vector3.zero;
+        }
+    }
 }

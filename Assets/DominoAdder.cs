@@ -19,10 +19,7 @@ public class DominoAdder : MonoBehaviour
     void Update()
     {
 
-        Debug.Log($"particl {particle}, is down: {isDown}");
-
         Vector3 mousePos=new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
-        Debug.Log(particle.transform);
         if(Input.GetMouseButtonDown(0)) {
             isDown = true;
             Ray ray = Camera.main.ScreenPointToRay(mousePos);
